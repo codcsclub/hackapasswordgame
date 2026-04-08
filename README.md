@@ -73,14 +73,15 @@ pip install flask
 
 This project requires two external datasets placed in the `data/` folder:
 
-- **rockyou.txt** — the RockYou breach dataset. Widely available for security research purposes. Search for "rockyou.txt download" or find it bundled with tools like Kali Linux at `/usr/share/wordlists/rockyou.txt`.
-- **words.txt** — any standard English word list. A common source is the Unix system dictionary at `/usr/share/dict/words`, or download one from [dwyl/english-words](https://github.com/dwyl/english-words).
+- **rockyou.txt** — the RockYou breach dataset. Widely available for security research purposes. Contains 14,341,564 unique passwords, used in 32,603,388 accounts
+Download at https://www.kaggle.com/datasets/wjburns/common-password-list-rockyoutxt
+- **words.txt** — any standard English word list. Download one from https://www.kaggle.com/datasets/lennartluik/all-english-words-csv
 
 Place both files in the `data/` directory before running.
 
 ### Run the app
 
-```bash
+```bash/terminal
 python main.py
 ```
 
@@ -88,6 +89,10 @@ Then open your browser and go to:
 
 ```
 http://127.0.0.1:5000
+```
+
+```
+Terminate program using Ctrl + C 
 ```
 
 > **Do not** open the HTML files directly in your browser or use the VS Code Live Server extension — the app requires Flask to handle routing and password analysis.
@@ -115,4 +120,4 @@ http://127.0.0.1:5000
 
 - The leaderboard ranks by estimated crack time (higher = stronger), showing the top 5 players
 - All leaderboard data is stored in memory only for the duration of the server session
-- The loading screen timer is set to 5 seconds by default for testing — change `WAIT_MS` in `loadingScreen.html` to `300000` for the intended 5-minute experience
+- The loading screen timer is set to 15 seconds by default for testing — change `WAIT_MS` in `loadingScreen.html` to `300000` for the intended 5-minute experience
