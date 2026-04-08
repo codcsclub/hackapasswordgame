@@ -73,7 +73,7 @@ pip install flask
 
 This project requires two external datasets placed in the `data/` folder:
 
-- **rockyou.txt** — the RockYou breach dataset. Widely available for security research purposes. Contains 14,341,564 unique passwords, used in 32,603,388 accounts
+- **rockyou.txt** — the RockYou breach dataset. Widely available for security research purposes. Contains 14,341,564 unique passwords, used in 32,603,388 accounts.
 Download at https://www.kaggle.com/datasets/wjburns/common-password-list-rockyoutxt
 - **words.txt** — any standard English word list. Download one from https://www.kaggle.com/datasets/lennartluik/all-english-words-csv
 
